@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "components";
+import { Sidebar } from "components";
 
 function Dashboard() {
   return (
     <div>
-      SideNav dan Main Content <Button title="coba" />
+      <Sidebar />
     </div>
   );
 }
