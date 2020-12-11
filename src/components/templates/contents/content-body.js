@@ -3,7 +3,7 @@ import React from "react";
 function ContentBody() {
   return (
     <div className="content-body">
-      <div>Content body</div>
+      <div className="cards-wrapper">Content body</div>
     </div>
   );
 }

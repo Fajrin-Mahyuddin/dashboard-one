@@ -1,1 +1,10 @@
 @import "styles/variables.scss";
+
+.breadcrumb {
+  padding: 10px 20px;
+  font-size: 11px;
+  color: $text-inactive;
+  span {
+    font-size: 11px;
+  }
+}

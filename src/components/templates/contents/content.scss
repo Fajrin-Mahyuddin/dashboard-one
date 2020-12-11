@@ -4,7 +4,9 @@
   margin-left: 18vw;
   .content-body {
     padding: 10px 20px;
-
-    background-color: salmon;
+    background-color: $gray;
+    margin: 0 20px;
+    border-radius: 5px;
+    color: $text-active;
   }
 }
