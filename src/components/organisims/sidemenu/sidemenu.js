@@ -1,31 +1,25 @@
 import React from "react";
 import "./sidemenu.scss";
-import { Link } from "components";
+import { Link, Labelbtn } from "components";
+import {
+  HomeOutlined,
+  RightOutlined,
+  BlockOutlined,
+  TableOutlined,
+} from "@ant-design/icons";
 
 function Sidemenu() {
   return (
     <div className="sidemenu">
-      <Link
-        className="link-item active"
-        href="/"
-        title="Menu"
-        icon="fa"
-        active={true}
-      />
-      <Link
-        className="link-item"
-        href="/"
-        title="Profile"
-        icon="fa"
-        active={false}
-      />
-      <Link
-        className="link-item"
-        href="/"
-        title="Setting"
-        icon="fa"
-        active={false}
-      />
+      <Link className="link-item active" href="/">
+        <Labelbtn title="Dashboard" Icons={HomeOutlined} /> <RightOutlined />
+      </Link>
+      <Link className="link-item" href="/">
+        <Labelbtn title="Components" Icons={BlockOutlined} /> <RightOutlined />
+      </Link>
+      <Link className="link-item" href="/">
+        <Labelbtn title="Components" Icons={TableOutlined} /> <RightOutlined />
+      </Link>
     </div>
   );
 }

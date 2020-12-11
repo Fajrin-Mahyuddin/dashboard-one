@@ -1,11 +1,7 @@
 import React from "react";
 
-function Link({ title, icon, ...rest }) {
-  return (
-    <a {...rest}>
-      {title} <i className={`fa ${icon}`}> ^ </i>
-    </a>
-  );
+function Link({ children, ...rest }) {
+  return <a {...rest}>{children}</a>;
 }
 
 export default Link;

@@ -1,0 +1,10 @@
+@import "styles/variables.scss";
+
+.container {
+  margin-left: 18vw;
+  .content-body {
+    padding: 10px 20px;
+
+    background-color: salmon;
+  }
+}
