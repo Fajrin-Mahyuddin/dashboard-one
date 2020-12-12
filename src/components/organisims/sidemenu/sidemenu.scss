@@ -4,6 +4,7 @@
   width: inherit;
   display: flex;
   flex-direction: column;
+  list-style: none;
   .link-item {
     padding: 15px 10px;
     font-size: 13px;
@@ -12,16 +13,35 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     border-left: 3px solid transparent;
     &.active {
       border-color: blue;
       color: $text-active;
       background-color: $white;
+      & + .child-link {
+        border-left: 3px solid blue;
+      }
     }
     &:hover {
       background-color: $white;
       color: $text-active;
+    }
+  }
+  .child-link {
+    border-left: 3px solid transparent;
+    list-style: none;
+    .child-link-item {
+      font-size: 12px;
+      text-decoration: none;
+      color: $text-inactive;
+      padding: 8px 0 8px 25px;
+      display: flex;
+      flex-direction: row;
+      &:hover {
+        color: $text-active;
+      }
     }
   }
 }

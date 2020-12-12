@@ -7,14 +7,14 @@ function Breadcrumbs({ data }) {
     <div className="breadcrumb">
       {data.map((list, i) => {
         return (
-          <span key={i}>
+          <a href="# " key={i}>
             {list}{" "}
             {Number(data.length - 2) < i ? (
               " "
             ) : (
               <RightOutlined style={{ fontSize: "9px" }} />
             )}{" "}
-          </span>
+          </a>
         );
       })}
     </div>

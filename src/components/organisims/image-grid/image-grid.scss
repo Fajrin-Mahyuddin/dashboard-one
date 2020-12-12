@@ -56,15 +56,16 @@
     grid-row-end: 3;
   }
   .img:nth-child(4) {
-    background-color: $text-active;
+    background-color: $text-inactive;
     grid-column-start: 6;
     grid-column-end: 8;
     grid-row-start: 1;
     grid-row-end: 3;
   }
   .img:nth-child(5) {
-    grid-column-start: 6;
-    grid-column-end: 7;
+    background-color: $text-active;
+    grid-column-start: 4;
+    grid-column-end: 6;
     grid-row-start: 3;
     grid-row-end: 5;
   }

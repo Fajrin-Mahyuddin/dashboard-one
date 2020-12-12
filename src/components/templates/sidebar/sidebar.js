@@ -7,7 +7,7 @@ function Sidebar() {
     <div className="sidebar">
       <Profile />
       <Sidemenu />
-      <Sidefooter />
+      {/* <Sidefooter /> */}
     </div>
   );
 }
