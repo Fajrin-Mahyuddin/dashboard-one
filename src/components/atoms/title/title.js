@@ -1,7 +1,7 @@
 import React from "react";
 
 function Title({ title }) {
-  return <h3>Dashboard Galery</h3>;
+  return <h3>{title}</h3>;
 }
 
 export default Title;
