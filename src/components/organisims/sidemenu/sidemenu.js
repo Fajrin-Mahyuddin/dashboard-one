@@ -8,6 +8,7 @@ import {
   TableOutlined,
   DownOutlined,
 } from "@ant-design/icons";
+import { motion, AnimatePresence } from "framer-motion";
 
 const menus = [
   {
@@ -81,14 +82,9 @@ function Sidemenu() {
   console.log("menu", menu);
   return (
     <ol className="sidemenu">
-      {/* <li>
-        <Link className="link-item" href="/">
-          <Labelbtn title="Dashboard" Icons={HomeOutlined} />
-        </Link>
-      </li> */}
       {menu.map((item, i) => {
         return (
-          <li>
+          <li key={i}>
             <Link
               className={`link-item ${item.isOpen && "active"} `}
               href="# "
@@ -97,28 +93,66 @@ function Sidemenu() {
               <Labelbtn title={item.title} Icons={item.ico} />
               {item.subMenu.length > 0 ? (
                 item.isOpen ? (
-                  <DownOutlined />
+                  <motion.div
+                    initial="right"
+                    animate="down"
+                    variants={{
+                      right: { opacity: 1, transform: "rotate(0deg)" },
+                      down: { opacity: 1, transform: "rotate(90deg)" },
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                  >
+                    <RightOutlined />
+                  </motion.div>
                 ) : (
-                  <RightOutlined />
+                  <motion.div
+                    initial="down"
+                    animate="right"
+                    variants={{
+                      right: { opacity: 1, transform: "rotate(0deg)" },
+                      down: { opacity: 1, transform: "rotate(90deg)" },
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                  >
+                    <RightOutlined />
+                  </motion.div>
                 )
               ) : (
                 ""
               )}
             </Link>
             <ol className="child-link">
-              {item.isOpen &&
-                item.subMenu.map((childItem, i) => {
-                  return (
-                    <li>
-                      <Link className="child-link-item" href="# /">
-                        <Labelbtn
-                          title={childItem.title}
-                          Icons={childItem.ico}
-                        />
-                      </Link>
-                    </li>
-                  );
-                })}
+              <AnimatePresence initial={false}>
+                {item.isOpen &&
+                  item.subMenu.map((childItem, i) => {
+                    return (
+                      <motion.li
+                        key={i}
+                        initial="collapsed"
+                        animate="open"
+                        exit="collapsed"
+                        variants={{
+                          open: { opacity: 1, height: "auto" },
+                          collapsed: { opacity: 0, height: 0 },
+                        }}
+                        transition={{
+                          duration: 0.5,
+                        }}
+                      >
+                        <Link className="child-link-item" href="# /">
+                          <Labelbtn
+                            title={childItem.title}
+                            Icons={childItem.ico}
+                          />
+                        </Link>
+                      </motion.li>
+                    );
+                  })}
+              </AnimatePresence>
             </ol>
           </li>
         );

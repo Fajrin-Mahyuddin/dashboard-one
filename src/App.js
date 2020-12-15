@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css";
 import { Home } from "./pages";
 import "./styles/index.scss";
