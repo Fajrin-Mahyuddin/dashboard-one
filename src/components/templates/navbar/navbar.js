@@ -1,13 +1,8 @@
 import React from "react";
 import "./navbar.scss";
 import { Link, Labelbtn, Image } from "components";
-import {
-  MailOutlined,
-  MenuOutlined,
-  UserOutlined,
-  BellOutlined,
-} from "@ant-design/icons";
-import img from "assets/img/image.jpg";
+import { MenuOutlined, UserOutlined, BellOutlined } from "@ant-design/icons";
+import img from "assets/img/my_logo.svg";
 
 function Navbar() {
   return (

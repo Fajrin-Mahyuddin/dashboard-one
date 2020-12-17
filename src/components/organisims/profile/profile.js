@@ -1,7 +1,7 @@
 import React from "react";
 import "./profile.scss";
 import { Image } from "components";
-import img from "assets/img/image.jpg";
+import img from "assets/img/my_logo.svg";
 
 function Profile() {
   return (

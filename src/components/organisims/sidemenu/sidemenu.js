@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import "./sidemenu.scss";
 import { Link, Labelbtn } from "components";
-import {
-  HomeOutlined,
-  RightOutlined,
-  BlockOutlined,
-  TableOutlined,
-  DownOutlined,
-} from "@ant-design/icons";
+import { HomeOutlined, RightOutlined, BlockOutlined } from "@ant-design/icons";
 import { motion, AnimatePresence } from "framer-motion";
 
 const menus = [

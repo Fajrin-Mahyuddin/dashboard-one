@@ -1,6 +1,6 @@
 import React from "react";
 import "./sidebar.scss";
-import { Profile, Sidemenu, Sidefooter } from "components";
+import { Profile, Sidemenu } from "components";
 
 function Sidebar() {
   return (
