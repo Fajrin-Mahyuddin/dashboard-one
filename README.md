@@ -1,6 +1,3 @@
-I build this website with my own code.
-design by https://github.com/iamelimars
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

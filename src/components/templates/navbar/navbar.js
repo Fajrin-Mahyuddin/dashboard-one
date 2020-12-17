@@ -18,7 +18,7 @@ function Navbar() {
           <Labelbtn Icons={BellOutlined} size={14} title="Notifikasi" />
         </Link>
         <Link href="# " className="nav-menu-item">
-          <Image className="nav-menu-item-img" src={img} />
+          <Image className="nav-menu-item-img" src={img} alt="nav-img" />
         </Link>
       </div>
     </div>
