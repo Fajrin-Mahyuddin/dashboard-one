@@ -1,1 +1,21 @@
 @import "./variables.scss";
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  :active {
+    border: none;
+  }
+  :visited {
+    border: none;
+  }
+  :hover {
+    border: none;
+  }
+}
+.primary {
+  background-color: $text-active;
+  color: $white;
+  border: 1px solid $text-active;
+  border-radius: 5px;
+}
